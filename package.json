@@ -18,6 +18,7 @@
     "@hapi/boom": "9.x.x",
     "@hapi/inert": "^7.1.0",
     "@hapipal/haute-couture": "4.x.x",
+    "@hapipal/schmervice": "^3.0.0",
     "@hapipal/schwifty": "6.x.x",
     "hapi-swagger": "^17.3.2",
     "joi": "^17.13.3",
