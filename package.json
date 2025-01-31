@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
+    "@hapi/inert": "^7.1.0",
     "@hapipal/haute-couture": "4.x.x",
     "@hapipal/schwifty": "6.x.x",
-    "joi": "17.x.x",
+    "hapi-swagger": "^17.3.2",
+    "joi": "^17.13.3",
+    "mysql": "^2.18.1",
     "objection": "2.x.x"
   },
   "peerDependencies": {
@@ -28,11 +31,11 @@
     "@hapi/code": "8.x.x",
     "@hapi/eslint-config-hapi": "13.x.x",
     "@hapi/eslint-plugin-hapi": "4.x.x",
-    "@hapi/glue": "8.x.x",
+    "@hapi/glue": "^8.0.0",
     "@hapi/hapi": "20.x.x",
     "@hapi/hoek": "9.x.x",
     "@hapi/lab": "24.x.x",
-    "@hapi/vision": "6.x.x",
+    "@hapi/vision": "^6.1.0",
     "@hapipal/confidence": "6.x.x",
     "@hapipal/hpal": "3.x.x",
     "@hapipal/hpal-debug": "2.x.x",

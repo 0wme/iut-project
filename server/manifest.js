@@ -31,6 +31,21 @@ module.exports = new Confidence.Store({
     register: {
         plugins: [
             {
+                plugin: '@hapi/inert'
+            },
+            {
+                plugin: '@hapi/vision'
+            },
+            {
+                plugin: 'hapi-swagger',
+                options: {
+                    info: {
+                        title: 'API Documentation',
+                        version: '1.0.0'
+                    }
+                }
+            },
+            {
                 plugin: '../lib', // Main plugin
                 options: {}
             },
@@ -42,13 +57,13 @@ module.exports = new Confidence.Store({
                     $base: {
                         migrateOnStart: true,
                         knex: {
-                            client: 'sqlite3',
-                            useNullAsDefault: true,     // Suggested for sqlite3
+                            client: 'mysql',
                             connection: {
-                                filename: ':memory:'
-                            },
-                            migrations: {
-                                stub: Schwifty.migrationsStubPath
+                                host: process.env.DB_HOST || '0.0.0.0',
+                                user: process.env.DB_USER || 'root',
+                                password: process.env.DB_PASSWORD || 'hapi',
+                                database: process.env.DB_DATABASE || 'user',
+                                port: process.env.DB_PORT || 3307
                             }
                         }
                     },
